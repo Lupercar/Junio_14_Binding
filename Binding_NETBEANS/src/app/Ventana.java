@@ -5,6 +5,8 @@
  */
 package app;
 
+import entidades.RepositorioAutores;
+
 /**
  *
  * @author tecnico
@@ -98,4 +100,6 @@ public class Ventana extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList<String> listaAutores;
     // End of variables declaration//GEN-END:variables
-}
+
+    private RepositorioAutores autores = new RepositorioAutores(); 
+}//fin JFrame app.Ventana
