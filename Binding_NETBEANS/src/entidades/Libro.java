@@ -5,7 +5,13 @@ class Libro {
     private String titulo;
     
     public Libro(){
-        
+        this(0, ""); 
+    }
+    
+    public Libro(int id, String titulo){
+        super(); 
+        this.setId(id);
+        this.setTitulo(titulo);
     }
     
     public int getId(){
