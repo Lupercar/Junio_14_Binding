@@ -5,7 +5,10 @@
  */
 package app;
 
+import entidades.Autor;
 import entidades.RepositorioAutores;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -94,6 +97,10 @@ public class Ventana extends javax.swing.JFrame {
                 new Ventana().setVisible(true);
             }
         });
+    }
+    
+    public List<Autor> getAutores(){
+        return autores.getAutores(); 
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
