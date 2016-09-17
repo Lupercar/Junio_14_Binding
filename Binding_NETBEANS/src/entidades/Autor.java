@@ -9,12 +9,13 @@ public class Autor {
     private List<Libro> libros = new ArrayList<>(); 
     
     public Autor(){
-        this(0, "");
+        this(0, "", null);
     }
 
-    public Autor(int id, String nombre) {
+    public Autor(int id, String nombre, List<Libro> libros) {
         super();
         this.setId(id);
+        this.setNombre(nombre);
         this.setLibros(libros);
     }
 
