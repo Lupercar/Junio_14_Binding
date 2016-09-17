@@ -14,11 +14,12 @@ public class RepositorioAutores {
         
         autores.add(new Autor(1, "Autor1", libros)); 
         
-        List<Libro> libros2 = new ArrayList<>();
+        libros = new ArrayList<>();
         
-        libros2.add(new Libro(3, "Libro3")); 
-        libros2.add(new Libro(4, "Libro4"));
+        libros.add(new Libro(3, "Libro3")); 
+        libros.add(new Libro(4, "Libro4"));
+        libros.add(new Libro(5, "Libro5"));
         
-        autores.add(new Autor(2, "Autor2", libros2)); 
+        autores.add(new Autor(2, "Autor2", libros)); 
     }
 }//fin class entidades.RepositorioAutores
