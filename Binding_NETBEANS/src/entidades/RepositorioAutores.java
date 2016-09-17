@@ -22,4 +22,8 @@ public class RepositorioAutores {
         
         autores.add(new Autor(2, "Autor2", libros)); 
     }
+    
+    public List<Autor> getAutores(){
+        return autores; 
+    }
 }//fin class entidades.RepositorioAutores
