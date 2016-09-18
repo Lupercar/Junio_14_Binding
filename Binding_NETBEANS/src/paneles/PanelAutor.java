@@ -108,7 +108,10 @@ public class PanelAutor extends javax.swing.JPanel {
 
 
     public void setAutor(Autor autor){
+        Autor oldAutor = this.autor; 
         this.autor = autor; 
+//        sólo avisa a los que hacen Binding si el valor nuevo y viejo son diferentes
+        firePropertyChange("autor", oldAutor, this.autor); 
     }
     
     public Autor getAutor(){
