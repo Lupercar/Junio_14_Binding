@@ -48,12 +48,6 @@ public class PanelAutor extends javax.swing.JPanel {
         org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, autor, org.jdesktop.beansbinding.ELProperty.create("${nombre}"), txtNombre, org.jdesktop.beansbinding.BeanProperty.create("text"));
         bindingGroup.addBinding(binding);
 
-        listaLibros.setModel(new javax.swing.AbstractListModel<String>() {
-            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
-            public int getSize() { return strings.length; }
-            public String getElementAt(int i) { return strings[i]; }
-        });
-
         org.jdesktop.beansbinding.ELProperty eLProperty = org.jdesktop.beansbinding.ELProperty.create("${libros}");
         org.jdesktop.swingbinding.JListBinding jListBinding = org.jdesktop.swingbinding.SwingBindings.createJListBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, autor, eLProperty, listaLibros);
         jListBinding.setDetailBinding(org.jdesktop.beansbinding.ELProperty.create("${titulo}"));
@@ -109,6 +103,8 @@ public class PanelAutor extends javax.swing.JPanel {
 
     public void setAutor(Autor autor){
         Autor oldAutor = this.autor; 
+        if(oldAutor == null)
+            oldAutor = new Autor(); 
         this.autor = autor; 
 //        sólo avisa a los que hacen Binding si el valor nuevo y viejo son diferentes
         firePropertyChange("autor", oldAutor, this.autor); 
